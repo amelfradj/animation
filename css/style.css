@@ -99,3 +99,42 @@ section {
 section h1::first-line{
     font-family: 'DolceLight';
 }
+/******************************pages********************************************
+********************************************************************************/
+section>div{
+    display: flex;/******permet de mettre les 3 div les unes à cote de l'autre******/
+
+}
+section>div div{
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    border: 2px solid white;
+}
+/******rotation********/
+#rot>div div:first-of-type{
+    transform: rotate(45deg);
+}
+#rot>div div:nth-of-type(2):hover{
+    transform: rotate(45deg);
+}
+#rot>div div:nth-of-type(3):hover{
+   transition: 0.5s; /********ajoute l effet sur la rotation*******/
+}
+#rot>div div:nth-of-type(3):hover{
+    transform: rotate(45deg);
+}
+
+/************************zoom*************/
+#zom>div div:first-of-type{
+    transform: scale (1.2);
+}
+#zom>div div:nth-of-type(2):hover{
+    transform: scale(0.8);
+}
+#zom>div div:nth-of-type(3):hover{
+   transition: 0.5s; /********ajoute l effet sur la rotation*******/
+}
+#zom>div div:nth-of-type(3):hover{
+    transform: scale(0.3);
+}
