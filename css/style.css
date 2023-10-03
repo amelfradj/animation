@@ -1,10 +1,12 @@
-*{//******mettre en tete pour retier le style deja prédefini****************/
+*{/******mettre en tete pour retier le style deja prédefini****************/
     margin: 0;
     padding: 0;
+    font-weight: normal;
 }
+
 /********debut fonts********/
 @font-face {
-    font-family: 'NEOTERIC';
+    font-family: 'neo';
     src: url('../fonts/');
     src: url('../fonts/?#iefix') format('embedded-opentype'),
         url('../fonts/NEOTERIC-Bold.woff2') format('woff2'),
@@ -16,7 +18,7 @@
 }
 
 @font-face {
-    font-family: 'Dolce Vita';
+    font-family: 'DolceLight';
     src: url('../fonts/DolceVitaLight.eot');
     src: url('../fonts/DolceVitaLight.eot?#iefix') format('embedded-opentype'),
         url('../fonts/DolceVitaLight.woff2') format('woff2'),
@@ -28,7 +30,7 @@
 }
 
 @font-face {
-    font-family: 'Dolce Vita';
+    font-family: 'Dolce';
     src: url('../fonts/DolceVita.eot');
     src: url('../fonts/DolceVita.eot?#iefix') format('embedded-opentype'),
         url('../fonts/DolceVita.woff2') format('woff2'),
@@ -42,18 +44,21 @@
 /**********************debut header*****************************/
 header {
     height: 70px;
-    
+    display: flex;/*********permet a l'image et la nav d etre l'une a coter de l autre**********/
+    justify-content: space-between;/********repartition a gauche et a droite des éléments et bord à bord du header**************/
+}
+header img{
+    height: 50px;/******taille image******/
+    margin: 10px;/*****marge*****/
 }
 header nav {
-    width: 100%;
-    top: 10px;
-    right: 10px;
-    position: fixed;
+display: flex;
+align-items: end;
 }
 
 header nav ul {
-    height: 50px;
-    display: flex;
+    height: 30px;
+    display: flex;/*****liste l une  a coter de l autre******/
     list-style: none;
     align-items: center;
     justify-content: flex-end;
@@ -66,14 +71,13 @@ header nav ul li{
 header nav ul li a{
     text-decoration: none;/****enleve le soulignement****/
     color: rgb(26, 24, 24);
-    font-family: 'NEOTERIC';
+    font-family: 'neo';
     margin: 10px;
+    transition: 0.5s;
     
 }
 header nav ul li a:hover {
-    border-bottom: 2px solid black; /** ajoute une bordure en bas lors du survol de couleur blanche */
-    opacity: 0.5; /**va creer une opacité au survol**/
-    color: black; /**couleur au survol du texte**/
+    border-bottom: 8px solid black; /** ajoute une bordure en bas lors du survol de couleur blanche */
 }
 /********fin du header***********/
 main {
@@ -84,15 +88,14 @@ main {
     justify-content: center;
     align-items: center;
 }
-/********************debit section********************/
+/********************debut section********************/
 section {
     text-align: center;
     font-size: 80px;
     color: white;
-    font-family: 'Dolce Vita';
+    font-family: 'Dolce';
     
 }
 section h1::first-line{
-    font-family: 'Dolce Vita';
-    font-weight: 100;
+    font-family: 'DolceLight';
 }
