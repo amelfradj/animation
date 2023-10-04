@@ -81,20 +81,36 @@ header nav ul li a:hover {
 }
 /********fin du header***********/
 main {
-    height: calc(100vh - 70px);
-    background: url(../img/fond3.jpg)center bottom fixed;
-    background-size: cover;
+    height: calc(100vh - 70px);/********on enléve la hauteur du header à la hauteur de l'ecran*****************************/
+    background: url(../img/fond3.jpg)center bottom fixed;/*******ajoute l'image en de section********/
+    background-size: cover;/*******************************/
     display: flex;
-    justify-content: center;
+    justify-content: center;/**********va centrer le h1 + la div et les autres section*******************/
     align-items: center;
 }
 /********************debut section********************/
 section {
     text-align: center;
-    font-size: 80px;
+    font-size: 16px;
     color: white;
     font-family: 'Dolce';
     
+}
+section h1{
+    font-size: 80px;
+}
+section a{
+    color: black;/*****couleur du lien*************/
+    padding: 15px 30px;/**************ajoute une marge interne de 15px en haut et en bas et 30px à gauche et à droite******************************/
+    background: white;/*fond de couleur*/
+    font-family: "dolce";/*change le font*/
+    letter-spacing: 1px;/*espace les lettres*/
+    text-decoration: none;/**enlève le soulignement*/
+    transition: 0.5s;/*va mettre un effet du changment sur hover*/
+}
+section a:hover{
+    background: black;/*change la couleur de fond A*/
+    color: white;/*CHANGE LA COULEUR DU TEXTE au survol*/
 }
 section h1::first-line{
     font-family: 'DolceLight';
@@ -106,35 +122,78 @@ section>div{
 
 }
 section>div div{
-    width: 200px;
-    height: 200px;
-    margin: 50px;
-    border: 2px solid white;
+    width: 150px;/*largeur des 3 petites div*/
+    height: 150px;/*heuteurdes 3 petites div*/
+    margin: 50px;/*eloigne les 3 div les unes des autres*/
+    border: 2px solid white;/*bordure blanche sur les 3 div*/
 }
 /******rotation********/
 #rot>div div:first-of-type{
-    transform: rotate(45deg);
+    transform: rotate(45deg);/*creer une rotation sur la premiere div des l'ouverture de la page*/
 }
-#rot>div div:nth-of-type(2):hover{
-    transform: rotate(45deg);
+#rot>div div:nth-of-type(2):hover{/*au survol sa tourne (hover) */
+    transform: rotate(45deg);/*creer une rotation sur la 2 div au survol*/
 }
 #rot>div div:nth-of-type(3):hover{
    transition: 0.5s; /********ajoute l effet sur la rotation*******/
 }
 #rot>div div:nth-of-type(3):hover{
-    transform: rotate(45deg);
+    transform: rotate(45deg);/*rotation sur 3 div au survol*/
 }
 
-/************************zoom*************/
+/************************zoom*************//**de 0 à 1 = reduction, au dessus de 1= agrandissement**/
 #zom>div div:first-of-type{
-    transform: scale (1.2);
+    transform: scale (1.2);/*augmente la taille du 1 div */
 }
-#zom>div div:nth-of-type(2):hover{
-    transform: scale(0.8);
+#zom>div div:nth-of-type(2):hover{/*au survol sa se reduit(hover)*/
+    transform: scale(0.8);/**reduire la taille 2 div*/
 }
 #zom>div div:nth-of-type(3):hover{
    transition: 0.5s; /********ajoute l effet sur la rotation*******/
 }
 #zom>div div:nth-of-type(3):hover{
-    transform: scale(0.3);
+    transform: scale(0.3);/*reduit la taille du 3 div */
+}
+/**********************déplacement**************************/
+#dep>div div:first-of-type{
+    transform: translate(30px 45px) ;/*incline la 1 div sur l'axe x(horizontalement)et y(verticalment)**/
+}
+#dep>div div:nth-of-type(2):hover{/*au survol sa se deplace*/
+    transform: translate(30px );
+}
+#dep>div div:nth-of-type(3):hover{
+   transition: 0.5s; /********ajoute l effet sur le deplacement*******/
+}
+#dep>div div:nth-of-type(3):hover{
+    transform: translate(30px);
+}
+/**************************inclinaison******************************/
+#incl>div div:first-of-type{
+    transform: skewX(15deg);
+}
+#incl>div div:nth-of-type(2):hover{
+    transform:skewX(15deg) skewY(0deg) ;
+}
+#incldiv div:nth-of-type(3):hover{
+   transition: 0.5s; /********ajoute l effet sur la rotation*******/
+}
+#incl>div div:nth-of-type(3):hover{
+    transform: skewX(15deg) skewY(15deg);
+}
+/************************origine************************/
+#origin>div div:first-of-type{
+    transform-origin: top left;
+    transform: rotate(45deg);
+}
+#origin>div div:nth-of-type(2):hover{
+    transform-origin: top right;
+    transform: rotate(15deg);
+
+}
+#origin>div div:nth-of-type(3):hover{
+   transition: 0.5s; /********ajoute l effet sur la rotation*******/
+}
+#origin>div div:nth-of-type(3):hover{
+   transform-origin: bottom center ;
+   transform: rotate(45deg);
 }
